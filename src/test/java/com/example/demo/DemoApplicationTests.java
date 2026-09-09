@@ -19,7 +19,7 @@ class DemoApplicationTests {
 //        executor.submit(tsk);
         executor.submit(() -> System.out.println("Executed task on "+ Thread.currentThread().getName()));
 
-        System.out.println("Main on "+ Thread.currentThread().getName());
+        System.out.println("Main execution on "+ Thread.currentThread().getName());
     }
 
 }
