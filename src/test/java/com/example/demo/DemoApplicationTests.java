@@ -62,7 +62,7 @@ class DemoApplicationTests {
         //so for resolving the issue of not knowing when the thread is executed and also to may be get the value of the execution we should use the method submit.
         //        executorService.submit(tsk); // this accept either Runnable or callable
         //and submit return the type of future.
-        //future's get() method stops the main thread execution and wait till that future's thread is completed . and also get() method can also return a value which we can use
+        //future's get() method stops the main thread execution and wait till that future's thread(any thread that is calling future.get()) is completed . and also get() method can also return a value which we can use
         //also for submit if any error or exception happens it boil to the main method that calls but the thread doesn't stop execution
 
         Future<Integer> exec1 = executorService.submit(() -> {
@@ -90,6 +90,8 @@ class DemoApplicationTests {
 
 //        executorService.awaitTermination(5, java.util.concurrent.TimeUnit.SECONDS);
 
+
+        //Notes for shutdown vs shutdown : Refer the NOTION notes
     }
 
 }
